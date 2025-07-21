@@ -1,0 +1,114 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+.container{
+    height: 100vh;
+}
+.main-container ul{
+    width: 500px;
+}
+.main-container ul li{
+     border-radius: 20px;
+     background-color: #002f55 ;
+     list-style: none;
+     text-transform:uppercase;
+}
+.main-container ul li:hover{
+    background-color: #002544;
+}
+.main-container ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+@media (max-width: 550px){
+    .main-container ul{
+        width: 300px;
+    }
+}
+
+header{
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 5px #666666;
+    height: 100px;
+}
+
+/* STATIC HEADER */
+.logo img{
+    height: 70px;
+    width: 70px;
+}
+
+.nav-link{
+    font-size: 16px;
+    font-weight: bold;
+    color: #D4AA7D;
+}
+
+.nav-link:hover{
+    color: #b18a61;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#burgerIcon {
+    font-size: 1.5rem;
+    color: #D4AA7D;
+  }
+
+.close-button {
+    border: none;
+    background: transparent;
+    color: black;
+    opacity: 0;
+}
+
+section{
+    margin: 60px 0;
+}
+
+section .container{
+    height: fit-content;
+    padding: 50px 0;
+}
+
+.row img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 50px;
+    box-shadow:10px 10px 10px 0 #666666;
+}
+
+@media (max-width: 767.98px) {
+    .navbar-collapse {
+        background-color: white;
+        padding: 50px;
+        border-radius: 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 2;
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+    }
+
+    .navbar-collapse.show {
+        transform: translateX(0);
+    }
+
+    header .navbar-toggler {
+        display: block;
+    }    
+
+    header .nav-link{
+        text-align: center;
+        color: black;
+    }
+
+    .close-button {
+        opacity: 1;
+    }
+}
