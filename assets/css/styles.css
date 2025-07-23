@@ -1,6 +1,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    padding-top: 0;
 }
 .container{
     height: 100vh;
@@ -21,6 +22,63 @@ body{
     text-decoration: none;
     color: #FFFFFF;
 }
+
+.nav-btn{
+    border-radius: 10px;
+    background-color: #D4AA7D;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.nav-btn:hover{
+    background-color: #b18a61;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    color: #D4AA7D;
+    border: none;
+    cursor: pointer;
+}
+  
+/* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    color: #b18a61;
+}
+  
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #D4AA7D;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+  
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+  
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
 @media (max-width: 550px){
     .main-container ul{
         width: 300px;
@@ -80,7 +138,7 @@ section .container{
     box-shadow:10px 10px 10px 0 #666666;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991px) {
     .navbar-collapse {
         background-color: white;
         padding: 50px;
@@ -99,6 +157,12 @@ section .container{
         transform: translateX(0);
     }
 
+    .navbar-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     header .navbar-toggler {
         display: block;
     }    
@@ -111,4 +175,31 @@ section .container{
     .close-button {
         opacity: 1;
     }
+}
+
+/* TRANSPARENT HEADER */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.transparent-header{
+    background: transparent;
+    box-shadow: none;
+    transition: background-color 0.3s ease;
+}
+
+.transparent-header.scrolled {
+    background-color: white;
+    box-shadow: 0 0 10px 5px #666666;
 }
